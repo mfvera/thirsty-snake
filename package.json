@@ -1,0 +1,29 @@
+{
+  "name": "thirsty-snake",
+  "version": "1.0.0",
+  "description": "A Discord bot that randomizes names.",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "pm2": "^4.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pm2 start index.js --watch && pm2 monit",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfvera/thirsty-snake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mfvera/thirsty-snake/issues"
+  },
+  "homepage": "https://github.com/mfvera/thirsty-snake#readme"
+}
