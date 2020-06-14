@@ -15,7 +15,6 @@ function choice(arr) {
 function getRandomName() {
     const adjective = choice(adjectives);
     const noun = choice(nouns);
-    console.log(`adj: ${adjective}, noun: ${noun}`);
     return capitalizeFirst(adjective) + " " + capitalizeFirst(noun);
 }
 
