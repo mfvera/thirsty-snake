@@ -9,7 +9,6 @@ module.exports = {
         const notificationMessage = await channel.send("Cleanup time :recycle:!");
         const messages = await channel.messages.fetch({ limit: 100 });
 
-        
         await channel.bulkDelete(messages.filter(msg => {
             return msg.author.id === this_bot_id && msg.id !== notificationMessage.id;
         }));
