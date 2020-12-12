@@ -2,6 +2,7 @@ const { getRandomName } = require("../wordLib");
 
 module.exports = {
     name: "reroll",
+    aliases: new Set(["rename", "changename"]),
     description: "Randomize/reroll the sender's name.",
     guildOnly: true,
     execute(message, args) {

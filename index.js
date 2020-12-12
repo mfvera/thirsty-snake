@@ -25,8 +25,9 @@ client.on("message", (message) => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandString = args.shift().toLowerCase();
 
-    if (!client.commands.has(commandString)) return;
-    const command = client.commands.get(commandString);
+    const command = client.commands.get(commandString)
+        || client.commands.find(cmd => cmd.aliases && cmd.aliases.has(commandString));
+    if (!command) return;
 
     if (command.guildOnly && message.guild === null) {
         console.warn(`Command ${commandString} was called within DM's`);
