@@ -8,7 +8,7 @@ module.exports = {
             console.log(`Getting avatar for ${message.author};`);
             return message.reply(`Your avatar: <${message.author.displayAvatarURL({ format: "png", dynamic: true })}>`);
         }
-        console.log(`Getting avatar for ${JSON.stringify(message.mentions.users)}; in response to user ${message.author}`);
+        console.log(`Getting avatar(s) for ${message.mentions.users.map(user => user.username).join(', ')}; in response to user ${message.author}`);
         message.reply(message.mentions.users.map(user => {
             return `${user.username}'s avatar: <${user.displayAvatarURL({ format: "png", dynamic: true })}>`;
         }).join('\n'));
